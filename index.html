@@ -21,7 +21,7 @@ do cabeçalho-->
                 <li class="d-flex flex-wrap align-items-center justify-content-between">
                     <figure class="mb-0 me-3">
                         <a href="index.html" class="logo-text">
-                            <img src="assets/icones/LOGO.png" alt="Logotipo Game Mania"  width="200" class="logo">
+                            <img src="assets/icones/LOGO.png" alt="Logotipo Game Mania"  width="400" class="logo">
                         </a>
                     </figure>
 
@@ -41,23 +41,37 @@ do cabeçalho-->
                             <img src="assets/icones/user.png" alt="Icone de login da conta" width="40" class="user-icon">
                         </figure>
                         <nav class="user-text ms-2">
-                            <span>Olá, <a href="login.html" class="user-link">Entre</a> ou</span>
-                            <a href="cadastre-se.html" class="user-link d-block">Cadastre-se</a>
+                            <span><a href="login.html" class="user-link">USUÁRIO</a></span>
                         </nav>
                     </nav>
 
 <!-- favoritos -->
 
-    <div class="fav">
-<img src="assets/icones/coracao.png" alt="favoritos" width="30" heigth="50">
-    </div>
+                    <nav class="fav-actions d-flex align-items-center me-3 order-2 order-md-3">
+                        <figure class="mb-0">
+                            <img src="assets/icones/coracao.png" alt="favoritos" width="30" heigth="50" class="fav-icon">
+                        </figure>
+                        <nav class="fav-text ms-2">
+                            <span> FAVORITOS <a href="" class="fav-link"></a></span>
+                        </nav>
+                    </nav>
     <br>
 
 <!-- carrinho -->    
-    <div class="cart">
-    <img src="assets/icones/shopping-cart.png" alt="carrinho de compras" width="30" heigth="50">
-    <a href="carrinho.html" class="link-carrinho">Minhas compras</a>
-    </div>
+                    <nav class="cart-actions d-flex align-items-center me-3 order-2 order-md-3">
+                        <figure class="mb-0">
+                            <img src="assets/icones/shopping-cart.png" alt="carrinho de compras" width="30" heigth="50">
+                        </figure>
+                        <nav class="cart-text ms-2">
+                            <span><a href="carrinho.html" class="cart-link">CARRINHO</a></span>
+
+                        </nav>
+                           
+                        
+                        
+                    </nav>
+                </li>
+            </ul>
     <br>
 
 
@@ -81,7 +95,7 @@ do cabeçalho-->
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#">Lançamentos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Fale Conosco</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Monte seu PC GAMERA</a></li>
                 </ul>
             </section>
         </nav>
@@ -99,15 +113,15 @@ do cabeçalho-->
                 <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <!--<button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button> -->
             </section>
             <figure class="carousel-inner mb-0">
                 <section class="carousel-item active"><img src="assets/carrossel/imagem01.jpg" class="d-block w-100" alt="..."></section>
                 <section class="carousel-item"><img src="assets/carrossel/imagem02.jpg" class="d-block w-100" alt="..."></section>
                 <section class="carousel-item"><img src="assets/carrossel/imagem03.jpg" class="d-block w-100" alt="..."></section>
-                <section class="carousel-item"><img src="assets/carrossel/imagem04.jpg" class="d-block w-100" alt="..."></section>
-                <section class="carousel-item"><img src="assets/carrossel/imagem05.jpg" class="d-block w-100" alt="..."></section>
+               <!-- <section class="carousel-item"><img src="assets/carrossel/imagem04.jpg" class="d-block w-100" alt="..."></section>
+                <section class="carousel-item"><img src="assets/carrossel/imagem05.jpg" class="d-block w-100" alt="..."></section> -->
             </figure>
             <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
@@ -122,86 +136,53 @@ do cabeçalho-->
                 <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="computadores.html" class="btn btn-departamento">
                 <img src="assets/departamentos/computador.jpg" alt="Ícone">
-                <span>Computadores</span>
+                <span class="dep-text">Computadores</span>
                 </a>
                 </article>
 
                 <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="notbook.html" class="btn btn-departamento">
                 <img src="assets/departamentos/notbook.jpg" alt="Ícone">
-                <span>Notbooks</span>
+                <span class="dep-text">Notebooks</span>
                 </a>
                 </article>
 
                 <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="tablets.html" class="btn btn-departamento">
                 <img src="assets/departamentos/tablets.jpg" alt="Ícone">
-                <span>Tablets</span>
+                <span class="dep-text">Tablets</span>
                 </a>
                 </article>
 
                 <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="perifericos.html" class="btn btn-departamento">
                 <img src="assets/departamentos/perifericos.jpg" alt="Ícone">
-                <span>Periféricos e Acessórios</span>
+                <span class="dep-text">Periféricos e Acessórios</span>
                 </a>
                 </article>
 
                 <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="games.html" class="btn btn-departamento">
                 <img src="assets/departamentos/games.jpg" alt="Ícone">
-                <span>Games</span>
+                <span class="dep-text">Games</span>
                 </a>
                 </article>
 
                 <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="drones.html" class="btn btn-departamento">
                 <img src="assets/departamentos/rede.jpg" alt="Ícone">
-                <span>Redes & Wireless</span>
+                <span class="dep-text">Redes & Wireless</span>
                 </a>
                 </article>
 
  <!-- vivi css aqui-->
   <style>
-/* Botão retangular com imagem em cima e texto centralizado */
-.btn-departamento{
-    display: flex;
-    flex-direction: column;      /* Imagem acima do texto */
-    align-items: center;         /* Centraliza horizontalmente */
-    justify-content: center;     /* Centraliza verticalmente */
-    width: 100%;                 /* Ocupa toda a largura do artigo */
-    padding: 15px;
-    border: none;      /* Borda do botão */
-    border-radius: 0;            /* Retangular */
-    text-decoration: none;       /* Remove sublinhado */
-    color: #333;
-    transition: all 0.3s;
-    text-align: center;          /* Centraliza o texto */
-    background-color: transparent; /* Sem cor de fundo */
-}
 
-.btn-departamento img {
-    width: 80px;                 /* Ajuste conforme necessário */
-    height: 80px;
-    margin-bottom: 10px;         /* Espaço entre imagem e texto */
-}
-
-.btn-departamento:hover {
-    border-color: #007BFF;       /* Muda a borda ao passar o mouse */
-    color: #007BFF;              /* Muda a cor do texto */
-    transform: translateY(-4px);
-    background-color: #f8f9fa;}
 
 </style>
 
-
-
             </section>
         </nav>
-
-
-
-
 
         <!-- Seção de Produtos -->
         <nav class="produtos container my-5">
@@ -334,11 +315,16 @@ do cabeçalho-->
     </main>
 
     
-<footer>
+<footer class="site-footer">
 
 
     <br>
     <br>
+    <h4 class="infos"> Dúvidas, informações ou orçamentos</h4>
+    <br>
+    <div class="faleconosco">
+        <button class="fale-conosco"><a class="text-faleconosco" href="fale conosco.html">FALE CONOSCO</a></button>
+    </div>
 
 <div class="social-icons">
     <a href="https://www.instagram.com" target="_blank">
@@ -379,21 +365,14 @@ do cabeçalho-->
 <br>
 
 
-    <section class="footer-section col-12 col-md-6 col-lg-3">
-        <h2>Newsletter</h2>
-            <form action="#" class="newsletter-form">
-            <input type="email" placeholder="Digite seu email" class="newsletter-input form-control mb-2">
-            <button type="submit" class="newsletter-button btn btn-warning w-100">Inscrever-se</button>
-            </form>
-     </section>
-
-
 <br>
 
-        <p> Preços e condições de pagamento exclusivos para compras via internet. Valores podem variar na loja física. Os preços anunciados neste site podem ser alterados sem aviso prévio. A GameMania não é responsável por erros descritivos. As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante. Ofertas válidas até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados.
+        <p class="infos"><i> Preços e condições de pagamento exclusivos para compras via internet.</i></p>
+           <p class="infos"><i> Valores podem variar na loja física. Os preços anunciados neste site podem ser alterados sem aviso prévio. </i></p>
+                    <p class="infos"><i>Ofertas válidas até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados.</i></p>
+                        <p class="infos"><i> GameMania não é responsável por erros descritivos. As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante.</i></p>
 
-
-        </p>
+        </i></p>
 <section class= "copyright text-center pt-4 mt-4">
     <p class="mb-0"> Desenvolvido por Viviane Almeida & Rosicler Falcão </p>
     <p class="mb-0"> &copy; 2025 GameMania. Todos os direitos reservados.</p>

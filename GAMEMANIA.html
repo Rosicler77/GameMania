@@ -14,13 +14,13 @@
 <!--Título com o nome da página que será uma imagem e outras funcionalidades 
 do cabeçalho-->
 <header>
-   <header class="site-header ">
+<header class="site-header ">
         <!-- Header Superior -->
         <nav class="container-fluid py-2">
             <ul class="list-unstyled m-0">
                 <li class="d-flex flex-wrap align-items-center justify-content-between">
                     <figure class="mb-0 me-3">
-                        <a href="GAMEMANIA.HTML" class="logo-text">
+                        <a href="index.html" class="logo-text">
                             <img src="assets/icones/LOGO.png" alt="Logotipo Game Mania"  width="200" class="logo">
                         </a>
                     </figure>
@@ -41,23 +41,31 @@ do cabeçalho-->
                             <img src="assets/icones/user.png" alt="Icone de login da conta" width="40" class="user-icon">
                         </figure>
                         <nav class="user-text ms-2">
-                            <span>Olá, <a href="login.html" class="user-link">Entre</a> ou</span>
-                            <a href="cadastre-se.html" class="user-link d-block">Cadastre-se</a>
+                            <span><a href="login.html" class="user-link">USUÁRIO</a></span>
                         </nav>
                     </nav>
 
 <!-- favoritos -->
 
-    <div class="fav">
-<img src="assets/icones/coracao.png" alt="favoritos" width="30" heigth="50">
-    </div>
+                    <nav class="fav-actions d-flex align-items-center me-3 order-2 order-md-3">
+                        <figure class="mb-0">
+                            <img src="assets/icones/coracao.png" alt="favoritos" width="30" heigth="50" class="fav-icon">
+                        </figure>
+                        <nav class="fav-text ms-2">
+                            <span> FAVORITOS <a href="" class="fav-link"></a></span>
+                        </nav>
+                    </nav>
     <br>
 
 <!-- carrinho -->    
-    <div class="cart">
-    <img src="assets/icones/shopping-cart.png" alt="carrinho de compras" width="30" heigth="50">
-    <a href="carrinho.html" class="link-carrinho">Minhas compras</a>
-    </div>
+                    <nav class="cart-actions d-flex align-items-center me-3 order-2 order-md-3">
+                        <figure class="mb-0">
+                            <img src="assets/icones/shopping-cart.png" alt="carrinho de compras" width="30" heigth="50">
+                <a href="carrinho.html" class="link-carrinho">CARRINHO</a>
+                        </figure>
+                    </nav>
+                </li>
+            </ul>
     <br>
 
 
@@ -72,22 +80,16 @@ do cabeçalho-->
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Hardware</a></li>
                             <li><a class="dropdown-item" href="#">Periféricos</a></li>
-                            <li><a class="dropdown-item" href="#">Armazenamento</a></li>
+                            <li><a class="dropdown-item" href="#">Computadores</a></li>
+                            <li><a class="dropdown-item" href="#">Monitores</a></li>
+                            <li><a class="dropdown-item" href="#">Notbooks & Portateis</a></li>
+                            <li><a class="dropdown-item" href="#">Redes & Wireless</a></li>
+                            <li><a class="dropdown-item" href="#">Video Games</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#">Lançamentos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Jogos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Ação</a></li>
-                            <li><a class="dropdown-item" href="#">Aventura</a></li>
-                            <li><a class="dropdown-item" href="#">RPG</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Suporte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Fale Conosco</a></li>
                 </ul>
             </section>
         </nav>
@@ -257,7 +259,7 @@ do cabeçalho-->
 .btn-departamento:hover {
     border-color: #007BFF;       /* Muda a borda ao passar o mouse */
     color: #007BFF;              /* Muda a cor do texto */
-}"
+}
 
 </style>
 
@@ -268,26 +270,8 @@ do cabeçalho-->
     </main>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
-<footer>
+<footer class="site-footer">
 
 
     <br>
@@ -306,14 +290,6 @@ do cabeçalho-->
 </div>
 <br>
 <br>
-
-<section class=""footer-section col12 col-md-6 col-lg-3">
-    <h2>Newsletter</h2>
-    <form action="#" class="newsletter-form">
-    <input type="email" placeholder="Digite seu email" class=""newsletter-input form-control mb-2">
-    <button type=""submit" class=""newsletter-button btn btn-warning w-100">Inscreva-se</button>
-    </form>
-</section>
 
 <section class= "copyright text-center pt-4 mt-4">
     <p class="mb-0"> Desenvolvido por Viviane Almeida & Rosicler Falcão </p>

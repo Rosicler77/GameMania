@@ -14,7 +14,7 @@
 <!--Título com o nome da página que será uma imagem e outras funcionalidades 
 do cabeçalho-->
 <header>
-   <header class="site-header ">
+<header class="site-header ">
         <!-- Header Superior -->
         <nav class="container-fluid py-2">
             <ul class="list-unstyled m-0">
@@ -41,23 +41,31 @@ do cabeçalho-->
                             <img src="assets/icones/user.png" alt="Icone de login da conta" width="40" class="user-icon">
                         </figure>
                         <nav class="user-text ms-2">
-                            <span>Olá, <a href="login.html" class="user-link">Entre</a> ou</span>
-                            <a href="cadastre-se.html" class="user-link d-block">Cadastre-se</a>
+                            <span><a href="login.html" class="user-link">USUÁRIO</a></span>
                         </nav>
                     </nav>
 
 <!-- favoritos -->
 
-    <div class="fav">
-<img src="assets/icones/coracao.png" alt="favoritos" width="30" heigth="50">
-    </div>
+                    <nav class="fav-actions d-flex align-items-center me-3 order-2 order-md-3">
+                        <figure class="mb-0">
+                            <img src="assets/icones/coracao.png" alt="favoritos" width="30" heigth="50" class="fav-icon">
+                        </figure>
+                        <nav class="fav-text ms-2">
+                            <span> FAVORITOS <a href="" class="fav-link"></a></span>
+                        </nav>
+                    </nav>
     <br>
 
 <!-- carrinho -->    
-    <div class="cart">
-    <img src="assets/icones/shopping-cart.png" alt="carrinho de compras" width="30" heigth="50">
-    <a href="carrinho.html" class="link-carrinho">Minhas compras</a>
-    </div>
+                    <nav class="cart-actions d-flex align-items-center me-3 order-2 order-md-3">
+                        <figure class="mb-0">
+                            <img src="assets/icones/shopping-cart.png" alt="carrinho de compras" width="30" heigth="50">
+                <a href="carrinho.html" class="link-carrinho">CARRINHO</a>
+                        </figure>
+                    </nav>
+                </li>
+            </ul>
     <br>
 
 
@@ -123,10 +131,8 @@ do cabeçalho-->
     
 
 </section>
-
-<footer>
    
-<footer>
+<footer class="site-footer">
 
 
     <br>
@@ -150,36 +156,17 @@ do cabeçalho-->
 <!-- Vivi CSS aqui-->
 
 <style>
-.social-icons {
-    display: flex;              /* ativa flexbox */
-    justify-content: center;    /* centraliza horizontalmente */
-    gap: 20px;                  /* espaço entre os ícones */
-    align-items: center;        /* centraliza verticalmente se tiver alturas diferentes */
-    margin: 20px 0;             /* espaço acima e abaixo */
-}
 
-.social-icons img {
-    transition: transform 0.3s;
-}
-
-.social-icons img:hover {
-    transform: scale(1.2);      /* efeito zoom ao passar o mouse */
-}
 </style>
 <br>
 <br>
 
-<section class=""footer-section col12 col-md-6 col-lg-3">
-    <h2>Newsletter</h2>
-    <form action="#" class="newsletter-form">
-    <input type="email" placeholder="Digite seu email" class=""newsletter-input form-control mb-2">
-    <button type=""submit" class=""newsletter-button btn btn-warning w-100">Inscreva-se</button>
-    </form>
-</section>
-  
 <br>
 
-        <p> Preços e condições de pagamento exclusivos para compras via internet. Valores podem variar na loja física. Os preços anunciados neste site podem ser alterados sem aviso prévio. A GameMania não é responsável por erros descritivos. As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante. Ofertas válidas até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados.
+        <p class="infos"><i> Preços e condições de pagamento exclusivos para compras via internet.</i></p>
+           <p class="infos"><i> Valores podem variar na loja física. Os preços anunciados neste site podem ser alterados sem aviso prévio. </i></p>
+                    <p class="infos"><i>Ofertas válidas até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados.</i></p>
+                        <p class="infos"><i> GameMania não é responsável por erros descritivos. As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante.</i></p>
 
 
         </p>
