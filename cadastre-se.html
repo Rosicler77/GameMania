@@ -52,7 +52,7 @@ do cabeçalho-->
                             <img src="assets/icones/coracao.png" alt="favoritos" width="30" heigth="50" class="fav-icon">
                         </figure>
                         <nav class="fav-text ms-2">
-                            <span> FAVORITOS <a href="" class="fav-link"></a></span>
+                            <span><a href="" class="fav-link"> FAVORITOS </a></span>
                         </nav>
                     </nav>
     <br>
@@ -61,8 +61,12 @@ do cabeçalho-->
                     <nav class="cart-actions d-flex align-items-center me-3 order-2 order-md-3">
                         <figure class="mb-0">
                             <img src="assets/icones/shopping-cart.png" alt="carrinho de compras" width="30" heigth="50">
-                <a href="carrinho.html" class="link-carrinho">CARRINHO</a>
                         </figure>
+                        <nav class="cart-text ms-2">
+                            <span><a href="carrinho.html" class="cart-link">CARRINHO</a></span>
+                        </nav>
+                            
+                       
                     </nav>
                 </li>
             </ul>
@@ -102,29 +106,55 @@ do cabeçalho-->
 
     <main>
 <!--Essa é a parte para se cadastrar-->
-    <div class="new-user">
-        <img src="assets/icones/new-account.png" alt="imagem para criar conta" width="50" heigth="75">
-        <p><h1>Novo Cliente</h1></p>
-        <h6>Criar uma conta é fácil! Informe seus dados e aproveite nossas ofertas!</h6>
-        <br>
-        <button>CADASTRE-SE</button>
-        <br>
-        <br>
+    
+<section class="registration">
+    <div class="registration-form">
+        <figure class="new-account-icon">
+            <img src="assets/icones/new-account.png" width="60" height="75">
+        </figure>
+        <p><h3><bold> Criar a minha conta</bold></h3></p>
+        <p><h5>Informe seus dados abaixo para criar sua conta</h5></p>
+        <form class="name" id="name-box">
+            <input type="text" name="Nome: " placeholder="Nome" class="name-input form-control">
+        </form>
+        <form class="surname">
+            <input type="text" name="Sobrenome: " placeholder="Sobrenome" class="surname-input form-control">
+        </form>
+        <form class="reg-type">
+            <label for="reg-type-text">Quero me cadastrar como: </label>
+            <select id="reg-type" name="Tipo" class="regi-type form-control">
+                <option value="" disabled selected>Selecione</option>
+                <option value="pf">Pessoa Física</option>
+                <option value="pj">Pessoa Jurídica</option>
+                </select>
+        </form>
+        <form class="reg-cpf">
+            <input type="text" name="CPF ou CNPJ: " placeholder="CPF ou CNPJ" class="cpf-input form-control">
+        </form>
+        <form class="registration-email">
+            <input type="email" name="E-mail: " placeholder="E-mail" class="reg-email-input form-control">
+        </form>
+        <form class="reg-password">
+            <input type="password" name="Senha: " placeholder="Senha" class="re-password-input form-control">
+        </form>
+            
+        
     </div>
-
-    <p class="text-center mt-3">
-             Já possui uma conta? <a href="login.html">Clique aqui</a>
-
-
+</section>
 
     </main>
 
     
 <footer class="site-footer">
-<br>
-<br>
-<br>
 
+
+    <br>
+    <br>
+    <h4 class="infos"> Dúvidas, informações ou orçamentos</h4>
+    <br>
+    <div class="faleconosco">
+        <button class="fale-conosco"><a class="text-faleconosco" href="fale conosco.html">FALE CONOSCO</a></button>
+    </div>
 
 <div class="social-icons">
     <a href="https://www.instagram.com" target="_blank">
@@ -144,17 +174,35 @@ do cabeçalho-->
 <!-- Vivi CSS aqui-->
 
 <style>
+.social-icons {
+    display: flex;              /* ativa flexbox */
+    justify-content: center;    /* centraliza horizontalmente */
+    gap: 20px;                  /* espaço entre os ícones */
+    align-items: center;        /* centraliza verticalmente se tiver alturas diferentes */
+    margin: 20px 0;             /* espaço acima e abaixo */
+}
 
+.social-icons img {
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);      /* efeito zoom ao passar o mouse */
+}
 </style>
-  
+
+
 <br>
+
+
+<br>
+
         <p class="infos"><i> Preços e condições de pagamento exclusivos para compras via internet.</i></p>
            <p class="infos"><i> Valores podem variar na loja física. Os preços anunciados neste site podem ser alterados sem aviso prévio. </i></p>
                     <p class="infos"><i>Ofertas válidas até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados.</i></p>
                         <p class="infos"><i> GameMania não é responsável por erros descritivos. As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante.</i></p>
 
-
-        </p>
+        </i></p>
 <section class= "copyright text-center pt-4 mt-4">
     <p class="mb-0"> Desenvolvido por Viviane Almeida & Rosicler Falcão </p>
     <p class="mb-0"> &copy; 2025 GameMania. Todos os direitos reservados.</p>

@@ -14,14 +14,14 @@
 <!--Título com o nome da página que será uma imagem e outras funcionalidades 
 do cabeçalho-->
 <header>
-<header class="site-header ">
+   <header class="site-header ">
         <!-- Header Superior -->
         <nav class="container-fluid py-2">
             <ul class="list-unstyled m-0">
                 <li class="d-flex flex-wrap align-items-center justify-content-between">
                     <figure class="mb-0 me-3">
                         <a href="index.html" class="logo-text">
-                            <img src="assets/icones/LOGO.png" alt="Logotipo Game Mania"  width="200" class="logo">
+                            <img src="assets/icones/LOGO.png" alt="Logotipo Game Mania"  width="400" class="logo">
                         </a>
                     </figure>
 
@@ -52,7 +52,7 @@ do cabeçalho-->
                             <img src="assets/icones/coracao.png" alt="favoritos" width="30" heigth="50" class="fav-icon">
                         </figure>
                         <nav class="fav-text ms-2">
-                            <span> FAVORITOS <a href="" class="fav-link"></a></span>
+                            <span><a href="" class="fav-link"> FAVORITOS </a></span>
                         </nav>
                     </nav>
     <br>
@@ -61,8 +61,12 @@ do cabeçalho-->
                     <nav class="cart-actions d-flex align-items-center me-3 order-2 order-md-3">
                         <figure class="mb-0">
                             <img src="assets/icones/shopping-cart.png" alt="carrinho de compras" width="30" heigth="50">
-                <a href="carrinho.html" class="link-carrinho">CARRINHO</a>
                         </figure>
+                        <nav class="cart-text ms-2">
+                            <span><a href="carrinho.html" class="cart-link">CARRINHO</a></span>
+                        </nav>
+                            
+                       
                     </nav>
                 </li>
             </ul>
@@ -89,7 +93,7 @@ do cabeçalho-->
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#">Lançamentos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Fale Conosco</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Monte seu PC GAMERA</a></li>
                 </ul>
             </section>
         </nav>
@@ -107,168 +111,206 @@ do cabeçalho-->
                 <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <!--<button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button> -->
             </section>
             <figure class="carousel-inner mb-0">
                 <section class="carousel-item active"><img src="assets/carrossel/imagem01.jpg" class="d-block w-100" alt="..."></section>
                 <section class="carousel-item"><img src="assets/carrossel/imagem02.jpg" class="d-block w-100" alt="..."></section>
                 <section class="carousel-item"><img src="assets/carrossel/imagem03.jpg" class="d-block w-100" alt="..."></section>
-                <section class="carousel-item"><img src="assets/carrossel/imagem04.jpg" class="d-block w-100" alt="..."></section>
-                <section class="carousel-item"><img src="assets/carrossel/imagem05.jpg" class="d-block w-100" alt="..."></section>
+               <!-- <section class="carousel-item"><img src="assets/carrossel/imagem04.jpg" class="d-block w-100" alt="..."></section>
+                <section class="carousel-item"><img src="assets/carrossel/imagem05.jpg" class="d-block w-100" alt="..."></section> -->
             </figure>
             <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
         </nav>
 
-        <!-- Seção de Produtos -->
-        <nav class="produtos container my-5">
-            <h2 class="text-center mb-4">Destaque</h2>
-            <section class="product-list row g-4">
-               
-                <!-- Itens de produto -->
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
-                    <img src="assets/destaques/cadeira gamer.jpg" alt="Imagem do Produto 1" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Cadeira Gamer</h3>
-                    <p class="product-price">R$ 199,99</p>
-                    <button class="add-to-cart btn btn-success mt-auto">Adicionar ao Carrinho</button>
-                </article>
-               
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
-                    <img src="assets/destaques/gabinete gamer.jpg" alt="Imagem do Produto 2" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Gabinete Gamer</h3>
-                    <p class="product-price">R$ 199,99</p>
-                    <button class="add-to-cart btn btn-success mt-auto">Adicionar ao Carrinho</button>
-                </article>
 
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
-                    <img src="assets/destaques/kit mouse e teclado.jpg" alt="Imagem do Produto 3" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Kit Mousse e Teclado</h3>
-                    <p class="product-price">R$ 99,99</p>
-                    <button class="add-to-cart btn btn-success mt-auto">Adicionar ao Carrinho</button>
-                </article>
-
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
-                    <img src="assets/destaques/mesa.jpg" alt="Imagem do Produto 4" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Mesa</h3>
-                    <p class="product-price">R$ 199,99</p>
-                    <button class="add-to-cart btn btn-success mt-auto">Adicionar ao Carrinho</button>
-                </article>
-
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
-                    <img src="assets/destaques/monitor gamer.jpg" alt="Imagem do Produto 5" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Monitor Gamer</h3>
-                    <p class="product-price">R$ 199,99</p>
-                    <button class="add-to-cart btn btn-success mt-auto">Adicionar ao Carrinho</button>
-                </article>
-
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
-                    <img src="assets/destaques/placa de video.jpg" alt="Imagem do Produto 6" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Placa de Vídeo</h3>
-                    <p class="product-price">R$ 199,99</p>
-                    <button class="add-to-cart btn btn-success mt-auto">Adicionar ao Carrinho</button>
-                </article>
-
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
-                    <img src="assets/destaques/placa mae.jpg" alt="Imagem do Produto 7" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Placa Mãe</h3>
-                    <p class="product-price">R$ 199,99</p>
-                    <button class="add-to-cart btn btn-success mt-auto">Adicionar ao Carrinho</button>
-                </article>
-
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
-                    <img src="assets/destaques/ssd.jpg" alt="Imagem do Produto 8" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title"> Memória SSD</h3>
-                    <p class="product-price">R$ 199,99</p>
-                    <button class="add-to-cart btn btn-success mt-auto">Adicionar ao Carrinho</button>
-                </article>
-
-
-         <!-- departamentos -->
+   <!-- departamentos -->
         <nav class="produtos container my-5">
             <h2 class="text-center mb-4">Departamentos</h2>
             <section class="product-list row g-4">
             
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
+                <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="computadores.html" class="btn btn-departamento">
                 <img src="assets/departamentos/computador.jpg" alt="Ícone">
-                <span>Computadores</span>
+                <span class="dep-text">Computadores</span>
                 </a>
                 </article>
 
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
+                <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="notbook.html" class="btn btn-departamento">
                 <img src="assets/departamentos/notbook.jpg" alt="Ícone">
-                <span>Notbooks</span>
+                <span class="dep-text">Notebooks</span>
                 </a>
                 </article>
 
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
+                <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="tablets.html" class="btn btn-departamento">
                 <img src="assets/departamentos/tablets.jpg" alt="Ícone">
-                <span>Tablets</span>
+                <span class="dep-text">Tablets</span>
                 </a>
                 </article>
 
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
+                <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="perifericos.html" class="btn btn-departamento">
                 <img src="assets/departamentos/perifericos.jpg" alt="Ícone">
-                <span>Periféricos e Acessórios</span>
+                <span class="dep-text">Periféricos e Acessórios</span>
                 </a>
                 </article>
 
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
+                <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="games.html" class="btn btn-departamento">
                 <img src="assets/departamentos/games.jpg" alt="Ícone">
-                <span>Games</span>
+                <span class="dep-text">Games</span>
                 </a>
                 </article>
 
-                <article class="product-item col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column">
+                <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
                 <a href="drones.html" class="btn btn-departamento">
-                <img src="assets/departamentos/drones.png" alt="Ícone">
-                <span>Drones</span>
+                <img src="assets/departamentos/rede.jpg" alt="Ícone">
+                <span class="dep-text">Redes & Wireless</span>
                 </a>
                 </article>
 
  <!-- vivi css aqui-->
   <style>
-/* Botão retangular com imagem em cima e texto centralizado */
-.btn-departamento{
-    display: flex;
-    flex-direction: column;      /* Imagem acima do texto */
-    align-items: center;         /* Centraliza horizontalmente */
-    justify-content: center;     /* Centraliza verticalmente */
-    width: 100%;                 /* Ocupa toda a largura do artigo */
-    padding: 15px;
-    border: none;      /* Borda do botão */
-    border-radius: 0;            /* Retangular */
-    text-decoration: none;       /* Remove sublinhado */
-    color: #333;
-    transition: all 0.3s;
-    text-align: center;          /* Centraliza o texto */
-    background-color: transparent; /* Sem cor de fundo */
-}
 
-.btn-departamento img {
-    width: 80px;                 /* Ajuste conforme necessário */
-    height: 80px;
-    margin-bottom: 10px;         /* Espaço entre imagem e texto */
-}
-
-.btn-departamento:hover {
-    border-color: #007BFF;       /* Muda a borda ao passar o mouse */
-    color: #007BFF;              /* Muda a cor do texto */
-}
 
 </style>
 
-
-
             </section>
         </nav>
-    </main>
 
+        <!-- Seção de Produtos -->
+        <nav class="produtos container my-5">
+            <h2 class="text-center mb-4">Destaque</h2>
+            <section class="product-list row g-4 justify-content-center">
+               
+                <!-- Itens de produto -->
+                <article class="product-item col-6 col-md-3 d-flex flex-column">
+                    <img src="assets/destaques/cadeira gamer.jpg" alt="Imagem do Produto 1" width="200" class="product-image img-fluid"> 
+                    <h3 class="product-title">Cadeira Gamer</h3>
+                    <p class="product-price">R$ 199,99</p>
+
+                    <button class="btn btn-success mt-auto"
+                        onclick="adicionarAoCarrinho(
+                        'Cadeira Gamer',
+                         199.99,
+                        'assets/destaques/cadeira gamer.jpg'
+                         )">
+                         Adicionar ao Carrinho
+                    </button>
+                </article>
+
+                <article class="product-item col-6 col-md-3 d-flex flex-column">
+                    <img src="assets/destaques/gabinete gamer.jpg" alt="Imagem do Produto 2" width="200" class="product-image img-fluid"> 
+                    <h3 class="product-title">Gabinete Gamer</h3>
+                    <p class="product-price">R$ 199,99</p>
+
+                    <button class="btn btn-success mt-auto"
+                        onclick="adicionarAoCarrinho(
+                        'Gabinete Gamer',
+                         199.99,
+                        'assets/destaques/gabinete gamer.jpg'
+                         )">
+                         Adicionar ao Carrinho
+                    </button>
+                </article>
+
+                <article class="product-item col-6 col-md-3 d-flex flex-column">
+                    <img src="assets/destaques/kit mouse e teclado.jpg" alt="Imagem do Produto 3" width="200" class="product-image img-fluid"> 
+                    <h3 class="product-title">Kit Mousse e Teclado</h3>
+                    <p class="product-price">R$ 99,99</p>
+
+                    <button class="btn btn-success mt-auto"
+                        onclick="adicionarAoCarrinho(
+                        'Kit mouse e teclado',
+                         99.99,
+                        'assets/destaques/kit mouse e teclado.jpg'
+                         )">
+                         Adicionar ao Carrinho
+                    </button>
+                </article>
+
+                
+                <article class="product-item col-6 col-md-3 d-flex flex-column">
+                    <img src="assets/destaques/mesa.jpg" alt="Imagem do Produto 4" width="200" class="product-image img-fluid"> 
+                    <h3 class="product-title">Mesa para computador</h3>
+                    <p class="product-price">R$ 199,99</p>
+
+                    <button class="btn btn-success mt-auto"
+                        onclick="adicionarAoCarrinho(
+                        'Mesa para computador',
+                         199.99,
+                        'assets/destaques/mesa.jpg'
+                         )">
+                         Adicionar ao Carrinho
+                    </button>
+                </article>
+                
+                <article class="product-item col-6 col-md-3 d-flex flex-column">
+                    <img src="assets/destaques/monitor gamer.jpg" alt="Imagem do Produto 4" width="200" class="product-image img-fluid"> 
+                    <h3 class="product-title">Monitor Gamer</h3>
+                    <p class="product-price">R$ 199,99</p>
+
+                    <button class="btn btn-success mt-auto"
+                        onclick="adicionarAoCarrinho(
+                        'Monitor Gamer',
+                         199.99,
+                        'assets/destaques/monitor gamer.jpg'
+                         )">
+                         Adicionar ao Carrinho
+                    </button>
+                </article>
+
+                 <article class="product-item col-6 col-md-3 d-flex flex-column">
+                    <img src="assets/destaques/placa de video.jpg" alt="Imagem do Produto 4" width="200" class="product-image img-fluid"> 
+                    <h3 class="product-title">Placa de Vídeo</h3>
+                    <p class="product-price">R$ 199,99</p>
+
+                    <button class="btn btn-success mt-auto"
+                        onclick="adicionarAoCarrinho(
+                        'Placa de Vídeo',
+                         199.99,
+                        'assets/destaques/placa de video.jpg'
+                         )">
+                         Adicionar ao Carrinho
+                    </button>
+                </article>
+
+                <article class="product-item col-6 col-md-3 d-flex flex-column">
+                    <img src="assets/destaques/placa mae.jpg" alt="Imagem do Produto 4" width="200" class="product-image img-fluid"> 
+                    <h3 class="product-title">Placa mãe</h3>
+                    <p class="product-price">R$ 199,99</p>
+
+                    <button class="btn btn-success mt-auto"
+                        onclick="adicionarAoCarrinho(
+                        'Placa Mãe',
+                         199.99,
+                        'assets/destaques/placa mae.jpg'
+                         )">
+                         Adicionar ao Carrinho
+                    </button>
+                </article>
+
+                <article class="product-item col-6 col-md-3 d-flex flex-column">
+                    <img src="assets/destaques/ssd.jpg" alt="Imagem do Produto 4" width="200" class="product-image img-fluid"> 
+                    <h3 class="product-title">Memória SSD</h3>
+                    <p class="product-price">R$ 199,99</p>
+
+                    <button class="btn btn-success mt-auto"
+                        onclick="adicionarAoCarrinho(
+                        'Memória SSD',
+                         199.99,
+                        'assets/destaques/ssd.jpg'
+                         )">
+                         Adicionar ao Carrinho
+                    </button>
+                </article>
+
+            
+    </main>
 
     
 <footer class="site-footer">
@@ -276,21 +318,59 @@ do cabeçalho-->
 
     <br>
     <br>
-<div class="instagram">
-    <img src="assets/icones/instagram.png" alt="logotipo instagram" width="30" heigth="50">
+    <h4 class="infos"> Dúvidas, informações ou orçamentos</h4>
+    <br>
+    <div class="faleconosco">
+        <button class="fale-conosco"><a class="text-faleconosco" href="fale conosco.html">FALE CONOSCO</a></button>
+    </div>
+
+<div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank">
+        <img src="assets/icones/instagram.png" alt="Instagram" width="30" height="30">
+    </a>
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="assets/icones/facebook.png" alt="Facebook" width="30" height="30">
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+        <img src="assets/icones/linkedin.png" alt="LinkedIn" width="30" height="30">
+    </a>
+    <a href="https://www.twitter.com" target="_blank">
+        <img src="assets/icones/twitter.png" alt="Twitter" width="30" height="30">
+    </a>
 </div>
-<div class="facebook">
-    <img src="assets/icones/facebook.png" alt="logotipo facebook" width="30" heigth="50">
-</div>
-<div class="linkedin">
-    <img src="assets/icones/linkedin.png" alt="logotipo linkedin" width="30" heigth="50">
-</div>
-<div class="twitter">
-    <img src="assets/icones/twitter.png" alt="logotipo twitter" width="30" heigth="50">
-</div>
-<br>
+
+<!-- Vivi CSS aqui-->
+
+<style>
+.social-icons {
+    display: flex;              /* ativa flexbox */
+    justify-content: center;    /* centraliza horizontalmente */
+    gap: 20px;                  /* espaço entre os ícones */
+    align-items: center;        /* centraliza verticalmente se tiver alturas diferentes */
+    margin: 20px 0;             /* espaço acima e abaixo */
+}
+
+.social-icons img {
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);      /* efeito zoom ao passar o mouse */
+}
+</style>
+
+
 <br>
 
+
+<br>
+
+        <p class="infos"><i> Preços e condições de pagamento exclusivos para compras via internet.</i></p>
+           <p class="infos"><i> Valores podem variar na loja física. Os preços anunciados neste site podem ser alterados sem aviso prévio. </i></p>
+                    <p class="infos"><i>Ofertas válidas até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados.</i></p>
+                        <p class="infos"><i> GameMania não é responsável por erros descritivos. As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante.</i></p>
+
+        </i></p>
 <section class= "copyright text-center pt-4 mt-4">
     <p class="mb-0"> Desenvolvido por Viviane Almeida & Rosicler Falcão </p>
     <p class="mb-0"> &copy; 2025 GameMania. Todos os direitos reservados.</p>
@@ -298,8 +378,11 @@ do cabeçalho-->
 </section>
 
 </footer>
-</body>
+
+    <!--JAVASCRIPT-->
+    <script src="assets/js/scripts.js"></script>
 
  <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>

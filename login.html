@@ -52,7 +52,7 @@ do cabeçalho-->
                             <img src="assets/icones/coracao.png" alt="favoritos" width="30" heigth="50" class="fav-icon">
                         </figure>
                         <nav class="fav-text ms-2">
-                            <span> FAVORITOS <a href="" class="fav-link"></a></span>
+                            <span><a href="" class="fav-link"> FAVORITOS </a></span>
                         </nav>
                     </nav>
     <br>
@@ -61,8 +61,12 @@ do cabeçalho-->
                     <nav class="cart-actions d-flex align-items-center me-3 order-2 order-md-3">
                         <figure class="mb-0">
                             <img src="assets/icones/shopping-cart.png" alt="carrinho de compras" width="30" heigth="50">
-                <a href="carrinho.html" class="link-carrinho">CARRINHO</a>
                         </figure>
+                        <nav class="cart-text ms-2">
+                            <span><a href="carrinho.html" class="cart-link">CARRINHO</a></span>
+                        </nav>
+                            
+                       
                     </nav>
                 </li>
             </ul>
@@ -101,42 +105,61 @@ do cabeçalho-->
 
 
 <main>
-
+<br>
+<br>
+<br>
   
 <!--Essa é a parte do login-->
-<section class="login-newuser">
+<section class="user">
     <div class="login" id="log-in">
         <img src="assets/icones/user2.png" alt="imagem para login" width="50" heigth="75">    
             <p><h1>Acessar minha conta</h1></p>
-            <form class="email" id="email-box">
-                <input type="text" name="digitar email" placeholder="E-mail">
-            </form>
+                <form class="email" id="email-box">
+                    <input  type="text" name="digitar email" placeholder="E-mail" class="email-input form-control d-flex flex-grow-1">
+                </form>
             <br>
-            <form class="password" id="password-box">
-                <input type="text" name="senha" placeholder="Senha">
-            </form>
-            <form>
-                <input type="checkbox" name="aceito">
-                <label for="aceito"><small>Lembrar meus dados.</small></label>
-            </form>
+                <form class="password" id="password-box">
+                    <input type="text" name="senha" placeholder="Senha" class="password-input form-control flex-grow-1">
+                </form>
+                <form>
+                    <input type="checkbox" name="aceito">
+                    <label for="aceito"><small>Lembrar meus dados.</small></label>
+                </form>
             <br>
             <br>
-            <button>ACESSAR CONTA</button>
-            <p><u><small>Esqueci minha senha</small></u></p>
-           
-            <p class="text-center mt-3">
-             Não possui uma conta? <a href="cadastre-se.html">Cadastre-se aqui</a>
+                <button>ACESSAR CONTA</button>
+                <p><u><small>Esqueci minha senha</small></u></p>
+
+    </div>
+    <div class="new-user">
+        <img src="assets/icones/new-account.png" alt="imagem para criar conta" width="50" heigth="75">
+        <p><h1>Novo Cliente</h1></p>
+        <h6>Criar uma conta é fácil! Informe seus dados e aproveite nossas ofertas!</h6>
+        <br>
+        <button><a href="cadastre-se.html">CADASTRE-SE</a></button>
+        <br>
+        <br>
     </div>
 
-    
-
+</section>
+<section class="cad-newuser">
+   
 </section>
    
+<br>
+<br>
+<br>
+
 <footer class="site-footer">
 
 
+      <br>
     <br>
+    <h4 class="infos"> Dúvidas, informações ou orçamentos</h4>
     <br>
+    <div class="faleconosco">
+        <button class="fale-conosco"><a class="text-faleconosco" href="fale conosco.html">FALE CONOSCO</a></button>
+    </div>
 
 <div class="social-icons">
     <a href="https://www.instagram.com" target="_blank">
@@ -156,20 +179,35 @@ do cabeçalho-->
 <!-- Vivi CSS aqui-->
 
 <style>
+.social-icons {
+    display: flex;              /* ativa flexbox */
+    justify-content: center;    /* centraliza horizontalmente */
+    gap: 20px;                  /* espaço entre os ícones */
+    align-items: center;        /* centraliza verticalmente se tiver alturas diferentes */
+    margin: 20px 0;             /* espaço acima e abaixo */
+}
 
+.social-icons img {
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);      /* efeito zoom ao passar o mouse */
+}
 </style>
+
+
 <br>
-<br>
+
 
 <br>
 
         <p class="infos"><i> Preços e condições de pagamento exclusivos para compras via internet.</i></p>
            <p class="infos"><i> Valores podem variar na loja física. Os preços anunciados neste site podem ser alterados sem aviso prévio. </i></p>
                     <p class="infos"><i>Ofertas válidas até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados.</i></p>
-                        <p class="infos"><i> GameMania não é responsável por erros descritivos. As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante.</i></p>
+                        <p class="infos"><i>As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante.</i></p>
 
-
-        </p>
+        </i></p>
 <section class= "copyright text-center pt-4 mt-4">
     <p class="mb-0"> Desenvolvido por Viviane Almeida & Rosicler Falcão </p>
     <p class="mb-0"> &copy; 2025 GameMania. Todos os direitos reservados.</p>
