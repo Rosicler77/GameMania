@@ -93,3 +93,108 @@ function mostrarCarrinho() {
 
 // Executa ao carregar a página
 window.onload = mostrarCarrinho;
+
+
+
+
+
+
+function abrirPopup(titulo, descricao, imagem, preco) {
+
+    // CONFIGURAÇÕES
+    const descontoPix = 0.10;         // 10% de desconto no PIX
+    const jurosMensal = 0.025;        // 2.5% ao mês no cartão
+    const parcelas = 12;              // quantidade de parcelas
+
+    // Cálculo PIX
+    const valorPix = (preco * (1 - descontoPix)).toFixed(2);
+
+    // Cálculo com juros compostos no cartão
+    const valorTotalComJuros = (preco * Math.pow(1 + jurosMensal, parcelas)).toFixed(2);
+    const valorParcela = (valorTotalComJuros / parcelas).toFixed(2);
+
+    document.getElementById("popupTitulo").textContent = titulo;
+
+    document.getElementById("popupTexto").innerHTML = `
+        ${descricao}<br><br>
+
+        <strong>💰 À vista no PIX:</strong>  
+        <span style="color:green; font-size:18px;">R$ ${valorPix}</span><br><br>
+
+        <strong>💳 No cartão (12x com juros):</strong><br>
+        12x de <strong>R$ ${valorParcela}</strong><br>
+        Total: <strong>R$ ${valorTotalComJuros}</strong><br><br>
+
+        <strong>Preço original:</strong> R$ ${preco.toFixed(2)}
+    `;
+
+    document.getElementById("popupImagem").src = imagem;
+
+    document.getElementById("popupDescricao").style.display = "flex";
+}
+
+function fecharPopup() {
+    document.getElementById("popupDescricao").style.display = "none";
+}
+
+
+/*favoritos */
+
+// SEMPRE carregar favoritos ao iniciar
+let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+// Salva no localStorage
+function salvarFavoritos() {
+    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+}
+
+function carregarFavoritos() {
+    return JSON.parse(localStorage.getItem("favoritos")) || [];
+}
+
+/* ------- Alternar Favorito ------- */
+function toggleFavorito(icone, nome, preco, imagem) {
+    favoritos = carregarFavoritos(); // <-- GARANTE QUE ESTÁ ATUALIZADO
+
+    const item = { nome, preco, imagem };
+    const existe = favoritos.find(f => f.nome === nome);
+
+    if (existe) {
+        favoritos = favoritos.filter(f => f.nome !== nome);
+        icone.classList.remove("ativo");
+    } else {
+        favoritos.push(item);
+        icone.classList.add("ativo");
+    }
+
+    salvarFavoritos();
+    atualizarContadorFavoritos();
+}
+
+/* ------- Atualizar contador ------- */
+function atualizarContadorFavoritos() {
+    favoritos = carregarFavoritos(); // <-- SEMPRE pega a versão correta
+
+    const contador = document.getElementById("favCount");
+    if (contador) {
+        contador.textContent = favoritos.length;
+
+        // efeito visual
+        contador.classList.add("animar");
+        setTimeout(() => contador.classList.remove("animar"), 300);
+    }
+}
+
+/* ------- Marcar corações do produto ------- */
+document.addEventListener("DOMContentLoaded", () => {
+    favoritos = carregarFavoritos();
+    atualizarContadorFavoritos();
+
+    document.querySelectorAll(".favorite-icon").forEach(icon => {
+        const nome = icon.getAttribute("onclick").split(",")[1].replace(/'/g, "").trim();
+        if (favoritos.find(f => f.nome === nome)) {
+            icon.classList.add("ativo");
+        }
+    });
+});
+

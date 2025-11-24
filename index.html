@@ -35,6 +35,8 @@ do cabeçalho-->
                     </form>
 
 
+
+
  <!-- acessar conta ou cadastrar -->
                     <nav class="user-actions d-flex align-items-center me-3 order-2 order-md-3">
                         <figure class="mb-0">
@@ -46,15 +48,20 @@ do cabeçalho-->
                     </nav>
 
 <!-- favoritos -->
+<nav class="fav-actions d-flex align-items-center me-3 order-2 order-md-3 position-relative">
+    <figure class="favorite mb-0 position-relative">
+        <img src="assets/icones/coracao.png" alt="favoritos" width="30" height="50" class="fav-icon">
 
-                    <nav class="fav-actions d-flex align-items-center me-3 order-2 order-md-3">
-                        <figure class="favorite mb-0">
-                            <img src="assets/icones/coracao.png" alt="favoritos" width="30" heigth="50" class="fav-icon">
-                        </figure>
-                        <nav class="fav-text ms-2">
-                            <span><a href="" class="fav-link"> FAVORITOS </a></span>
-                        </nav>
-                    </nav>
+        <!-- Badge de quantidade -->
+        <span id="favCount" class="fav-count">0</span>
+    </figure>
+
+    <nav class="fav-text ms-2">
+        <a href="favoritos.html" class="fav-link">FAVORITOS</a>
+    </nav>
+</nav>
+
+                   
     <br>
 
 <!-- carrinho -->    
@@ -93,12 +100,13 @@ do cabeçalho-->
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#">Lançamentos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Monte seu PC GAMERA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Monte seu PC GAMER</a></li>
                 </ul>
             </section>
         </nav>
-    </header>    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </header>
+    <!--<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -167,17 +175,13 @@ do cabeçalho-->
                 </article>
 
                 <article class="product-item col-6 col-md-4 col-lg-2 d-flex flex-column">
-                <a href="drones.html" class="btn btn-departamento">
+                <a href="redes.html" class="btn btn-departamento">
                 <img src="assets/departamentos/rede.jpg" alt="Ícone">
                 <span class="dep-text">Redes & Wireless</span>
                 </a>
                 </article>
 
- <!-- vivi css aqui-->
-  <style>
 
-
-</style>
 
             </section>
         </nav>
@@ -186,12 +190,39 @@ do cabeçalho-->
         <nav class="produtos container my-5">
             <h2 class="text-center mb-4">Destaque</h2>
             <section class="product-list row g-4 justify-content-center">
-               
+
+
                 <!-- Itens de produto -->
-                <article class="product-item col-6 col-md-3 d-flex flex-column">
+                <article class="product-item col-6 col-md-3 d-flex flex-column position-relative">
+                    <span class="favorite-icon"
+                        onclick="toggleFavorito(this, 'Cadeira Gamer', 199.99, 'assets/destaques/cadeira gamer.jpg')">
+
+                     <!-- Coração favoritos -->
+                        <svg class="heart-svg" viewBox="0 0 24 24">
+                        <path class="heart-path"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                            2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                            C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </span>
+
                     <img src="assets/destaques/cadeira gamer.jpg" alt="Imagem do Produto 1" width="200" class="product-image img-fluid"> 
                     <h3 class="product-title">Cadeira Gamer</h3>
                     <p class="product-price">R$ 199,99</p>
+
+                        <!--ver descrição do item-->
+                        <button class="btn btn-primary mt-2"
+                        onclick="abrirPopup(
+                                'Cadeira Gamer',
+                                'Tenha o máximo de conforto e estilo com seu material em couro e acabamentos impecáveis. O assento e o encosto são moldados, e a estrutura feita com nylon peto, garantindo maior durabilidade em seu uso contínuo! Possui altura ajustavel de 116 a 126 cm, rodas de nylon com 50mm, braço reclinavel e encosto para cabeça e lombar. Possui manual',
+                                'assets/destaques/cadeira gamer.jpg',
+                                199.99
+                                )">
+                                Ver Detalhes
+                        </button>
+                             
+                        <br>
 
                     <button class="btn btn-success mt-auto"
                         onclick="adicionarAoCarrinho(
@@ -203,10 +234,38 @@ do cabeçalho-->
                     </button>
                 </article>
 
-                <article class="product-item col-6 col-md-3 d-flex flex-column">
+
+
+                <!-- 2 item-->
+                <article class="product-item col-6 col-md-3 d-flex flex-column position-relative">
+                    <span class="favorite-icon"
+                        onclick="toggleFavorito(this, 'Gabinete Gamer', 199.99, 'assets/destaques/gabinete gamer.jpg')">
+
+                     <!-- Coração favoritos -->
+                        <svg class="heart-svg" viewBox="0 0 24 24">
+                        <path class="heart-path"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                            2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                            C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </span>              
+                    
                     <img src="assets/destaques/gabinete gamer.jpg" alt="Imagem do Produto 2" width="200" class="product-image img-fluid"> 
                     <h3 class="product-title">Gabinete Gamer</h3>
                     <p class="product-price">R$ 199,99</p>
+
+                    <!--ver descrição do item-->
+                        <button class="btn btn-primary mt-2"
+                        onclick="abrirPopup(
+                                'Gabinete Gamer',
+                                'Com toda a sua parte interna na cor preta, este gabinete é a sua escolha perfeita para um setup organizado e cheio de estilo. Compatível com placas mãe padrão ATX / M-ATX / ITX. A lateral de vidro cristalina, ainda permite que você admire o interior da sua obra. Simplesmente demais!',
+                                'assets/destaques/gabinete gamer.jpg',
+                                199.99
+                                )">
+                                Ver Detalhes
+                        </button>
+                <br>
 
                     <button class="btn btn-success mt-auto"
                         onclick="adicionarAoCarrinho(
@@ -218,14 +277,42 @@ do cabeçalho-->
                     </button>
                 </article>
 
-                <article class="product-item col-6 col-md-3 d-flex flex-column">
+
+
+                <!-- 3 item-->
+                <article class="product-item col-6 col-md-3 d-flex flex-column position-relative">
+                    <span class="favorite-icon"
+                        onclick="toggleFavorito(this, 'Kit Mouse e Teclado', 99.99, 'assets/destaques/kit mouse e teclado.jpg')">
+
+                     <!-- Coração favoritos -->
+                        <svg class="heart-svg" viewBox="0 0 24 24">
+                        <path class="heart-path"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                            2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                            C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </span>              
+                    
                     <img src="assets/destaques/kit mouse e teclado.jpg" alt="Imagem do Produto 3" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Kit Mousse e Teclado</h3>
+                    <h3 class="product-title">Kit Mouse e Teclado</h3>
                     <p class="product-price">R$ 99,99</p>
+
+                    <!--ver descrição do item-->
+                        <button class="btn btn-primary mt-2"
+                        onclick="abrirPopup(
+                                'Kit Mouse e Teclado',
+                                'Este kit é ergonomicamente projetado para se ajustarem à sua posição natural e confortável. O mouse, com botões esquerdo, direito e roda de rolagem mantêm seus movimentos sob controle. Com seu sensor óptico de 1600 DPI, funciona em praticamente qualquer superfície com uma precisão surpreendente. O telcado possui indicadores LED que iluminam Number Lock, Caps Lock e Scroll Lock para que você não precise adivinhar o que está ativado ou desativado.',
+                                'assets/destaques/kit mouse e teclado.jpg',
+                                99.99
+                                )">
+                                Ver Detalhes
+                        </button>
+                <br>
 
                     <button class="btn btn-success mt-auto"
                         onclick="adicionarAoCarrinho(
-                        'Kit mouse e teclado',
+                        'Kit Mouse e Teclado',
                          99.99,
                         'assets/destaques/kit mouse e teclado.jpg'
                          )">
@@ -233,86 +320,219 @@ do cabeçalho-->
                     </button>
                 </article>
 
-                
-                <article class="product-item col-6 col-md-3 d-flex flex-column">
+
+                 <!-- 4 item-->
+                <article class="product-item col-6 col-md-3 d-flex flex-column position-relative">
+                    <span class="favorite-icon"
+                        onclick="toggleFavorito(this, 'Mesa', 199.99, 'assets/destaques/mesa.jpg')">
+
+                     <!-- Coração favoritos -->
+                        <svg class="heart-svg" viewBox="0 0 24 24">
+                        <path class="heart-path"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                            2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                            C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </span>              
+                    
                     <img src="assets/destaques/mesa.jpg" alt="Imagem do Produto 4" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Mesa para computador</h3>
+                    <h3 class="product-title">Mesa para Computador</h3>
                     <p class="product-price">R$ 199,99</p>
+
+                    <!--ver descrição do item-->
+                        <button class="btn btn-primary mt-2"
+                        onclick="abrirPopup(
+                                'Mesa',
+                                'De estética minimalista e estrutura ergonômica para ambientes de trabalho e lazer, possui construção robusta suportando até 100kg. Dimensões de 1100x600x180mm, integração com diversos equipamentos e espaços.',
+                                'assets/destaques/Mesa.jpg',
+                                199.99
+                                )">
+                                Ver Detalhes
+                        </button>
+                <br>
 
                     <button class="btn btn-success mt-auto"
                         onclick="adicionarAoCarrinho(
-                        'Mesa para computador',
+                        'Mesa',
                          199.99,
                         'assets/destaques/mesa.jpg'
                          )">
                          Adicionar ao Carrinho
                     </button>
                 </article>
-                
-                <article class="product-item col-6 col-md-3 d-flex flex-column">
-                    <img src="assets/destaques/monitor gamer.jpg" alt="Imagem do Produto 4" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Monitor Gamer</h3>
-                    <p class="product-price">R$ 199,99</p>
 
-                    <button class="btn btn-success mt-auto"
+               
+                 <!-- 5 item-->
+                <article class="product-item col-6 col-md-3 d-flex flex-column position-relative">
+                    <span class="favorite-icon"
+                        onclick="toggleFavorito(this, 'Monitor Gamer', 799.99, 'assets/destaques/monitor gamer.jpg')">
+
+                     <!-- Coração favoritos -->
+                        <svg class="heart-svg" viewBox="0 0 24 24">
+                        <path class="heart-path"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                            2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                            C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </span>              
+                    
+                    <img src="assets/destaques/monitor gamer.jpg" alt="Imagem do Produto 5" width="200" class="product-image img-fluid"> 
+                    <h3 class="product-title">Monitor Gamer</h3>
+                    <p class="product-price">R$ 799,99</p>
+
+                    <!--ver descrição do item-->
+                        <button class="btn btn-primary mt-2"
+                        onclick="abrirPopup(
+                                'Monitor Gamer',
+                                'Tecnologia e Precisão com painel IPS com 1ms (GtG) de resposta e 180Hz para jogos fluidos. Dispõe de HDMI e DisplayPort para conexões versáteis. Compatibilidade com NVIDIA G-SYNC e AMD FreeSync para eliminar rupturas na imagem, além de HDR10 e cobertura de 99% sRGB para cores vibrantes.',
+                                'assets/destaques/monitor gamer.jpg',
+                                799.99
+                                )">
+                                Ver Detalhes
+                        </button>
+                <br>
+
+                   <button class="btn btn-success mt-auto"
                         onclick="adicionarAoCarrinho(
                         'Monitor Gamer',
-                         199.99,
+                         799.99,
                         'assets/destaques/monitor gamer.jpg'
                          )">
                          Adicionar ao Carrinho
                     </button>
                 </article>
 
-                 <article class="product-item col-6 col-md-3 d-flex flex-column">
-                    <img src="assets/destaques/placa de video.jpg" alt="Imagem do Produto 4" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Placa de Vídeo</h3>
-                    <p class="product-price">R$ 199,99</p>
+
+                <!-- 6 item-->
+                <article class="product-item col-6 col-md-3 d-flex flex-column position-relative">
+                    <span class="favorite-icon"
+                        onclick="toggleFavorito(this, 'Placa de video', 999.99, 'assets/destaques/placa de video.jpg')">
+
+                     <!-- Coração favoritos -->
+                        <svg class="heart-svg" viewBox="0 0 24 24">
+                        <path class="heart-path"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                            2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                            C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </span>              
+                    
+                    <img src="assets/destaques/placa de video.jpg" alt="Imagem do Produto 6" width="200" class="product-image img-fluid"> 
+                    <h3 class="product-title">Placa de vídeo</h3>
+                    <p class="product-price">R$ 999,99</p>
+
+                    <!--ver descrição do item-->
+                        <button class="btn btn-primary mt-2"
+                        onclick="abrirPopup(
+                                'Placa de video',
+                                'Placa de Vídeo XFX AMD RADEON RX 7600 Gaming Graphics Card.Este componente foi projetado para oferecer a melhor experiência em jogos na resolução 1080p, combinando força bruta e eficiência energética. No coração desta placa, encontramos a inovadora arquitetura AMD RDNA 3, que redefine o que é possível em termos de desempenho gráfico. Com unidades de computação redesenhadas e aceleradores de Ray Tracing de segunda geração, você experimentará uma iluminação, sombras e reflexos incrivelmente realistas em tempo real. A RX 7600 não é apenas uma placa de vídeo; é a porta de entrada para a próxima era dos games, garantindo taxas de quadros elevadas e uma jogabilidade fluida nos títulos competitivos e AAA mais exigentes do mercado atual.',
+                                'assets/destaques/placa de video.jpg',
+                                999.99
+                                )">
+                                Ver Detalhes
+                        </button>
+                <br>
 
                     <button class="btn btn-success mt-auto"
                         onclick="adicionarAoCarrinho(
                         'Placa de Vídeo',
-                         199.99,
+                         999.99,
                         'assets/destaques/placa de video.jpg'
                          )">
                          Adicionar ao Carrinho
                     </button>
                 </article>
 
-                <article class="product-item col-6 col-md-3 d-flex flex-column">
-                    <img src="assets/destaques/placa mae.jpg" alt="Imagem do Produto 4" width="200" class="product-image img-fluid"> 
+
+                <!-- 7 item-->
+                <article class="product-item col-6 col-md-3 d-flex flex-column position-relative">
+                    <span class="favorite-icon"
+                        onclick="toggleFavorito(this, 'Placa mãe', 549.99, 'assets/destaques/placa mae.jpg')">
+
+                     <!-- Coração favoritos -->
+                        <svg class="heart-svg" viewBox="0 0 24 24">
+                        <path class="heart-path"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                            2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                            C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </span>              
+                    
+                    <img src="assets/destaques/placa mae.jpg" alt="Imagem do Produto 7" width="200" class="product-image img-fluid"> 
                     <h3 class="product-title">Placa mãe</h3>
-                    <p class="product-price">R$ 199,99</p>
+                    <p class="product-price">R$ 549,99</p>
+
+                    <!--ver descrição do item-->
+                        <button class="btn btn-primary mt-2"
+                        onclick="abrirPopup(
+                                'Placa mãe',
+                                'Arquitetura AMD AM4, chipset B550 e suporte para Ryzen de 3ª geração para desempenho otimizado. Possui compatibilidade com memórias DDR4 de até 128GB (4600MHz O.C.) e tecnologia AMD CrossFireX para versatilidade. Ideal para jogos e aplicações exigentes, com dissipação de calor eficiente para estabilidade. Inclui DisplayPort 1.2 e HDMI 2.1(4K@60HZ) para experiências visuais imersivas.',
+                                'assets/destaques/placa mae.jpg',
+                                549.99
+                                )">
+                                Ver Detalhes
+                        </button>
+                <br>
 
                     <button class="btn btn-success mt-auto"
                         onclick="adicionarAoCarrinho(
-                        'Placa Mãe',
-                         199.99,
+                        'Placa mãe',
+                         549.99,
                         'assets/destaques/placa mae.jpg'
                          )">
                          Adicionar ao Carrinho
                     </button>
                 </article>
 
-                <article class="product-item col-6 col-md-3 d-flex flex-column">
-                    <img src="assets/destaques/ssd.jpg" alt="Imagem do Produto 4" width="200" class="product-image img-fluid"> 
-                    <h3 class="product-title">Memória SSD</h3>
-                    <p class="product-price">R$ 199,99</p>
+
+                <!-- 8 item-->
+                <article class="product-item col-6 col-md-3 d-flex flex-column position-relative">
+                    <span class="favorite-icon"
+                        onclick="toggleFavorito(this, 'Memoria', 299.99, 'assets/destaques/ssd.jpg')">
+
+                     <!-- Coração favoritos -->
+                        <svg class="heart-svg" viewBox="0 0 24 24">
+                        <path class="heart-path"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                            2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                            C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </span>              
+                    
+                    <img src="assets/destaques/ssd.jpg" alt="Imagem do Produto 8" width="200" class="product-image img-fluid"> 
+                    <h3 class="product-title">SSD</h3>
+                    <p class="product-price">R$ 299,99</p>
+
+                    <!--ver descrição do item-->
+                        <button class="btn btn-primary mt-2"
+                        onclick="abrirPopup(
+                                'SSD',
+                                'Com seu design fino e de fácil instalação, a Rover opera com uma tensão de 3.3V e se conecta direto na sua placa mãe utilizando a energia dela para operar, é só encaixar, parafusar e pronto!.Capacidade 256 GB. Velocidade de leitura 3200 MB/s. Velocidade de gravação 2700 MB/s.',
+                                'assets/destaques/ssd.jpg',
+                                299.99
+                                )">
+                                Ver Detalhes
+                        </button>
+                <br>
 
                     <button class="btn btn-success mt-auto"
                         onclick="adicionarAoCarrinho(
-                        'Memória SSD',
-                         199.99,
-                        'assets/destaques/ssd.jpg'
+                        'Placa mãe',
+                         299.99,
+                        'assets/destaques/placa mae.jpg'
                          )">
                          Adicionar ao Carrinho
                     </button>
-                </article>
+                </article>   
 
-            
-    </main>
-
-    
+        </section>
+        </nav>    
+    </main>  
 <footer class="site-footer">
 
 
@@ -378,6 +598,132 @@ do cabeçalho-->
 </section>
 
 </footer>
+
+<!--descrição do item em pop up-->
+<div id="popupDescricao" class="popup">
+    <div class="popup-content">
+        <!-- BOTÃO X-->
+        <span class="fechar" id="btnFecharPop">&times;</span>
+        <!-- IMAGEM -->
+        <img id="popupImagem" src="" alt="" class="img-fluid mb-3" style="max-width:250px;">
+        <!-- TÍTULO -->
+        <h3 id="popupTitulo"></h3>
+        <!-- TEXTO COM SCROLL -->
+        <div class="texto-scroll">
+            <p id="popupTexto"></p>
+        </div>
+        <!-- BOTÃO FECHAR ABAIXO-->
+        <button class="btn-fechar" id="btnFecharBottom">Fechar</button>
+    </div>
+</div>
+
+
+
+
+<!--css aqui do pop -->
+<style>
+/* Fundo escurecido */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Janela do popup */
+.popup-content {
+    background: #fff;
+    width: 90%;
+    max-width: 420px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    max-height: 85vh;
+    /*overflow: hidden;*/
+}
+
+/* Imagem */
+.popup-img {
+    width: 220px;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Botão X */
+/*.popup-close {*/
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+/* Área com rolagem */
+.texto-scroll {
+    max-height: 40vh;
+    overflow-y: auto;
+    margin: 10px 0;
+    padding-right: 10px;
+}
+
+/* Preço */
+#popupPreco {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Botão vermelho */
+.btn-fechar {
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.btn-fechar:hover {
+    background: #b30000;
+}
+
+</style>
+
+<script>
+function abrirPopup(titulo, texto, imagem) {
+    document.getElementById("popupTitulo").textContent = titulo;
+    document.getElementById("popupTexto").textContent = texto;
+    document.getElementById("popupImagem").src = imagem;
+
+    document.getElementById("popupDescricao").style.display = "flex";
+}
+
+function fecharPopup() {
+    document.getElementById("popupDescricao").style.display = "none";
+}
+
+document.getElementById("btnFecharPop").addEventListener("click", fecharPopup);
+document.getElementById("btnFecharBottom").addEventListener("click", fecharPopup);
+
+// Fechar clicando fora
+document.getElementById("popupDescricao").addEventListener("click", function(e){
+    if(e.target.id === "popupDescricao") fecharPopup();
+});
+</script>
 
     <!--JAVASCRIPT-->
     <script src="assets/js/scripts.js"></script>

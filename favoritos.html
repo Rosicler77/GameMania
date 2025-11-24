@@ -104,44 +104,134 @@ do cabeçalho-->
                 </ul>
             </section>
         </nav>
-    </header>
-    <!--<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    </header>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 
     <main>
+        <!-- Banner com Carousel do Bootstrap -->
+        <nav id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <section class="carousel-indicators">
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <!--<button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button> -->
+            </section>
+            <figure class="carousel-inner mb-0">
+                <section class="carousel-item active"><img src="assets/carrossel/imagem01.jpg" class="d-block w-100" alt="..."></section>
+                <section class="carousel-item"><img src="assets/carrossel/imagem02.jpg" class="d-block w-100" alt="..."></section>
+                <section class="carousel-item"><img src="assets/carrossel/imagem03.jpg" class="d-block w-100" alt="..."></section>
+               <!-- <section class="carousel-item"><img src="assets/carrossel/imagem04.jpg" class="d-block w-100" alt="..."></section>
+                <section class="carousel-item"><img src="assets/carrossel/imagem05.jpg" class="d-block w-100" alt="..."></section> -->
+            </figure>
+            <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
+        </nav>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
- 
 
-    <title>Carrinho de Compras</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+
+
+    <title>Favoritos</title>
+       <style>
+        .fav-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .fav-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .fav-item img {
+            width: 100px;
+            border-radius: 6px;
+        }
+
+        .limpar-btn {
+            margin-top: 20px;
+        }
+    </style>
 <body>
-<div class="container my-5">
-    <h2 class="mb-4">Carrinho de Compras</h2>
 
-    <div id="carrinho-itens"></div>
+<h2 class="text-center my-4">Meus Favoritos</h2>
 
-    <div class="d-flex justify-content-between align-items-center mt-4">
-        <h3 id="total">Total: R$ 0,00</h3>
-        <div>
-            <button class="btn btn-secondary me-2" onclick="window.location.href='index.html'">Continuar Comprando</button>
-            <button class="btn btn-warning" onclick="limparCarrinho()">Limpar Carrinho</button>
-        </div>
-    </div>
+<div class="fav-container" id="listaFavoritos"></div>
+
+<div class="text-end">
+    <button class="btn btn-danger limpar-btn" onclick="limparFavoritos()">
+        Limpar Favoritos
+    </button>
 </div>
-       </main>
 
-    
+<script>
+let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+function mostrarFavoritos() {
+    const container = document.getElementById("listaFavoritos");
+    container.innerHTML = "";
+
+    if (favoritos.length === 0) {
+        container.innerHTML = "<p>Nenhum item nos favoritos.</p>";
+        return;
+    }
+
+    favoritos.forEach(item => {
+        container.innerHTML += `
+            <div class="fav-item">
+                <img src="${item.imagem}">
+                <div>
+                    <h4>${item.nome}</h4>
+                    <p>Preço: R$ ${item.preco.toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+    });
+}
+
+function limparFavoritos() {
+    localStorage.removeItem("favoritos");
+    favoritos = [];
+    mostrarFavoritos();
+}
+
+mostrarFavoritos();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const favCount = document.getElementById("favCount");
+
+    // Carrega favoritos salvos
+    const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+    // Atualiza o contador do menu
+    if (favCount) {
+        favCount.textContent = favoritos.length;
+    }
+
+});
+</script>
+
+
+
+
+ <br>
+ <br>
+
 <footer class="site-footer">
 
 
-     <br>
+    <br>
     <br>
     <h4 class="infos"> Dúvidas, informações ou orçamentos</h4>
     <br>
@@ -204,6 +294,65 @@ do cabeçalho-->
 
 </footer>
 
+<script>
+// ---------- FAVORITOS E CONTADOR ----------
+
+// Atualiza badge do menu em qualquer página
+function atualizarContadorFavoritos() {
+    const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    const badge = document.getElementById("favCount");
+
+    if (badge) {
+        badge.textContent = favoritos.length;
+    }
+}
+
+
+// ---------- LISTA DA PÁGINA FAVORITOS ----------
+
+function mostrarFavoritos() {
+    const lista = document.getElementById("listaFavoritos");
+    const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+    lista.innerHTML = "";
+
+    if (favoritos.length === 0) {
+        lista.innerHTML = "<p>Nenhum item nos favoritos.</p>";
+        return;
+    }
+
+    favoritos.forEach(item => {
+        lista.innerHTML += `
+            <div class="fav-item">
+                <img src="${item.imagem}">
+                <div>
+                    <h4>${item.nome}</h4>
+                    <p>Preço: R$ ${item.preco.toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+    });
+}
+</script>
+
+<script>
+// ---------- BOTÃO LIMPAR ----------
+function limparFavoritos() {
+    localStorage.removeItem("favoritos");
+    mostrarFavoritos();
+    atualizarContadorFavoritos(); // ATUALIZA O BADGE DO MENU
+}
+
+
+// ---------- AO ABRIR A PÁGINA ----------
+document.addEventListener("DOMContentLoaded", () => {
+    mostrarFavoritos();
+    atualizarContadorFavoritos();
+});
+</script>
+
+
+
     <!--JAVASCRIPT-->
     <script src="assets/js/scripts.js"></script>
 
@@ -211,3 +360,5 @@ do cabeçalho-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
