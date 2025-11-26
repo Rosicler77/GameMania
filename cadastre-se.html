@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<HTML lang="pt-br">
+<head>
+    <!--Título que aparece no navegador e configuração do teclado-->
+    <title>GAMEMANIA</title>
+    <link rel="icon" type="image/png" href="">
+   
+    <!-- Seu CSS Customizado -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<!--Título com o nome da página que será uma imagem e outras funcionalidades 
+do cabeçalho-->
+<header>
+   <header class="site-header ">
+        <!-- Header Superior -->
+        <nav class="container-fluid py-2">
+            <ul class="list-unstyled m-0">
+                <li class="d-flex flex-wrap align-items-center justify-content-between">
+                    <figure class="mb-0 me-3">
+                        <a href="index.html" class="logo-text">
+                            <img src="assets/icones/LOGO.png" alt="Logotipo Game Mania"  width="400" class="logo">
+                        </a>
+                    </figure>
+
+  
+                    <!-- pesquisa produto -->
+                    <form action="#" class="search-bar flex-grow-1 mx-md-4 my-2 my-md-0 order-3 order-md-2">
+                        <input type="text" placeholder="Pesquise pelo produto aqui" class="search-input form-control">
+                        <button type="submit" class="search-button btn p-0">
+                            <img src="assets/icones/search.png" class="search-image" width="25" alt="Pesquisar">
+                        </button>
+                    </form>
+
+
+
+
+ <!-- acessar conta ou cadastrar -->
+                    <nav class="user-actions d-flex align-items-center me-3 order-2 order-md-3">
+                        <figure class="mb-0">
+                            <img src="assets/icones/user.png" alt="Icone de login da conta" width="40" class="user-icon">
+                        </figure>
+                        <nav class="user-text ms-2">
+                            <span><a href="login.html" class="user-link">USUÁRIO</a></span>
+                        </nav>
+                    </nav>
+
+<!-- favoritos -->
+<nav class="fav-actions d-flex align-items-center me-3 order-2 order-md-3 position-relative">
+    <figure class="favorite mb-0 position-relative">
+        <img src="assets/icones/coracao.png" alt="favoritos" width="30" height="50" class="fav-icon">
+
+        <!-- Badge de quantidade -->
+        <span id="favCount" class="fav-count">0</span>
+    </figure>
+
+    <nav class="fav-text ms-2">
+        <a href="favoritos.html" class="fav-link">FAVORITOS</a>
+    </nav>
+</nav>
+
+                   
+    <br>
+
+<!-- carrinho -->    
+                    <nav class="cart-actions d-flex align-items-center me-3 order-2 order-md-3">
+                        <figure class="mb-0">
+                            <img src="assets/icones/shopping-cart.png" alt="carrinho de compras" width="30" heigth="50">
+                        </figure>
+                        <nav class="cart-text ms-2">
+                            <span><a href="carrinho.html" class="cart-link">CARRINHO</a></span>
+                        </nav>
+                            
+                       
+                    </nav>
+                </li>
+            </ul>
+    <br>
+
+
+    <!-- Menu de Navegação Principal -->
+          <nav class="menu-bar navbar navbar-expand-lg">
+            <section class="container-fluid justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Departamentos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Hardware</a></li>
+                            <li><a class="dropdown-item" href="#">Periféricos</a></li>
+                            <li><a class="dropdown-item" href="#">Computadores</a></li>
+                            <li><a class="dropdown-item" href="#">Monitores</a></li>
+                            <li><a class="dropdown-item" href="#">Notbooks & Portateis</a></li>
+                            <li><a class="dropdown-item" href="#">Redes & Wireless</a></li>
+                            <li><a class="dropdown-item" href="#">Video Games</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Lançamentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Monte seu PC GAMER</a></li>
+                </ul>
+            </section>
+        </nav>
+    </header>
+    <!--<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+   
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+    <main>
+<!--Essa é a parte para se cadastrar-->
+    
+<section class="registration">
+    <div class="registration-form">
+        <figure class="new-account-icon">
+            <img src="assets/icones/new-account.png" width="60" height="75">
+        </figure>
+        <p><h3><bold> Criar a minha conta</bold></h3></p>
+        <p><h5>Informe seus dados abaixo para criar sua conta</h5></p>
+        <form class="name" id="name-box">
+            <input type="text" name="Nome: " placeholder="Nome" class="name-input form-control">
+        </form>
+        <form class="surname">
+            <input type="text" name="Sobrenome: " placeholder="Sobrenome" class="surname-input form-control">
+        </form>
+        <form class="reg-type">
+            <label for="reg-type-text">Quero me cadastrar como: </label>
+            <select id="reg-type" name="Tipo" class="regi-type form-control">
+                <option value="" disabled selected>Selecione</option>
+                <option value="pf">Pessoa Física</option>
+                <option value="pj">Pessoa Jurídica</option>
+                </select>
+        </form>
+        <form class="reg-cpf">
+            <input type="text" name="CPF ou CNPJ: " placeholder="CPF ou CNPJ" class="cpf-input form-control">
+        </form>
+        <form class="registration-email">
+            <input type="email" name="E-mail: " placeholder="E-mail" class="reg-email-input form-control">
+        </form>
+        <form class="reg-password">
+            <input type="password" name="Senha: " placeholder="Senha" class="re-password-input form-control">
+        </form>
+            
+        
+    </div>
+</section>
+
+    </main>
+
+    
+<footer class="site-footer">
+
+
+    <br>
+    <br>
+    <h4 class="infos"> Dúvidas, Informações ou Orçamentos</h4>
+    <br>
+    <div class="faleconosco">
+        <button class="fale-conosco"><a class="text-faleconosco" href="faleconosco.html">FALE CONOSCO</a></button>
+    </div>
+
+<div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank">
+        <img src="assets/icones/instagram.png" alt="Instagram" width="30" height="30">
+    </a>
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="assets/icones/facebook.png" alt="Facebook" width="30" height="30">
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+        <img src="assets/icones/linkedin.png" alt="LinkedIn" width="30" height="30">
+    </a>
+    <a href="https://www.twitter.com" target="_blank">
+        <img src="assets/icones/twitter.png" alt="Twitter" width="30" height="30">
+    </a>
+</div>
+
+<!-- Vivi CSS aqui-->
+
+<style>
+.social-icons {
+    display: flex;              /* ativa flexbox */
+    justify-content: center;    /* centraliza horizontalmente */
+    gap: 20px;                  /* espaço entre os ícones */
+    align-items: center;        /* centraliza verticalmente se tiver alturas diferentes */
+    margin: 20px 0;             /* espaço acima e abaixo */
+}
+
+.social-icons img {
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);      /* efeito zoom ao passar o mouse */
+}
+</style>
+
+
+<br>
+
+
+<br>
+
+        <p class="infos"><i> Preços e condições de pagamento exclusivos para compras via internet.</i></p>
+           <p class="infos"><i> Valores podem variar na loja física. Os preços anunciados neste site podem ser alterados sem aviso prévio. </i></p>
+                    <p class="infos"><i>Ofertas válidas até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados.</i></p>
+                        <p class="infos"><i> GameMania não é responsável por erros descritivos. As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante.</i></p>
+
+        </i></p>
+<section class= "copyright text-center pt-4 mt-4">
+    <p class="mb-0"> Desenvolvido por Viviane Almeida & Rosicler Falcão </p>
+    <p class="mb-0"> &copy; 2025 GameMania. Todos os direitos reservados.</p>
+
+</section>
+
+</footer>
+
+    <!--JAVASCRIPT-->
+    <script src="assets/js/scripts.js"></script>
+
+ <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

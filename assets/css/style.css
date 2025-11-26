@@ -1,0 +1,535 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.site-header {
+    background-color: #73a3f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+}
+
+/* Barra de busca */
+.search-bar {
+    position: relative;
+    max-width: 800px;
+}
+
+.search-input.form-control {
+    border-radius: 20px;
+    padding-right: 45px; /* Espaço para o ícone da lupa */
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+}
+
+.search-image {
+    width: 20px;
+    height: 20px;
+}
+
+/* Área do usuário */
+.user-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.user-text {
+    font-size: 14px;
+    color: black;
+    line-height: 1.2;
+}
+
+.user-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.user-link:hover {
+    color: darkblue;
+}
+
+/* Ícones */
+.icons-image {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.fav-link:hover {
+   color: darkblue;
+}
+
+.fav-text {
+    font-size: 14px;
+    color: black;
+    line-height: 1.2;
+}
+
+.fav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.cart-link:hover {
+    color: darkblue;
+}
+.cart-text {
+    font-size: 14px;
+    color: black;
+    line-height: 1.2;
+}
+
+.cart-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Menu de navegação */
+.menu-bar {
+    background-color: #0b3550;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-bar .nav-link {
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    transition: color 0.3s;
+}
+
+.menu-bar .nav-link:hover,
+.menu-bar .nav-link:focus {
+    color: #ffd700;
+}
+
+.dropdown-menu {
+    background-color: #0b3550;
+}
+.dropdown-item {
+    color: white;
+}
+.dropdown-item:hover {
+    background-color: #072033;
+    color: #ffd700;
+}
+
+
+/* Seção de Produtos */
+.produtos h2 {
+    color: #072033;
+    font-weight: bold;
+}
+
+.product-item {
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Garante que o flex-column funcione */
+    flex-direction: column;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.product-image {
+    border-radius: 4px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* Mantém a imagem quadrada */
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #072033;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 20px;
+    color: #072033;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-to-cart.btn-success {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-to-cart.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Estilo do Footer */
+.site-footer {
+    background-color: #73a3f0;
+    color: black;
+}
+
+.fale-conosco {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(235, 67, 67);
+    border-radius: 6px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    
+}
+
+.faleconosco {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+
+}
+
+.text-faleconosco {
+    font-size: 14px;
+    color: black;
+    font-style: bold;
+    line-height: 1.2;
+}
+
+.infos-faleconosco {
+    padding-left: 30px;
+}
+
+.title-faleconosco {
+    text-align: center;
+}
+
+.faleconosco-form.form-control {
+display: flex;
+flex-direction: column;
+max-width: 30%;
+
+
+}
+
+.form-faleconosco {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+   
+    
+}
+
+.uni-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+}
+
+
+.footer-section h2 {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-section a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #73a3f0;
+}
+
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+}
+
+/* Estilos para Páginas de Formulário (Login/Cadastro) */
+.form-page-main {
+    background-color: #f4f4f4; /* Um fundo suave para a área do formulário */
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.form-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    color: #072033;
+    font-weight: bold;
+}
+
+.email-input.form-control {
+    width: 450px; 
+    max-width: 90%;
+    margin: 0 auto; /*centraliza*/
+    display: block; /*necessário para margin funcionar*/
+    
+}
+
+.password-input.form-control {
+    width: 450px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+.user {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding-left: 80px;
+    padding-right: 50px;
+
+}
+
+.login {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: fit-content;
+    
+}
+
+.new-user {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+}
+
+.infos {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    line-height: 2px;
+}
+
+.social-icons {
+    display: flex;              /* ativa flexbox */
+    justify-content: center;    /* centraliza horizontalmente */
+    gap: 20px;                  /* espaço entre os ícones */
+    align-items: center;        /* centraliza verticalmente se tiver alturas diferentes */
+    margin: 20px 0;             /* espaço acima e abaixo */
+}
+
+.social-icons img {
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);      /* efeito zoom ao passar o mouse */
+}
+
+/* Botão retangular com imagem em cima e texto centralizado */
+.btn-departamento{
+    display: flex;
+    flex-direction: column;      /* Imagem acima do texto */
+    align-items: center;         /* Centraliza horizontalmente */
+    justify-content: center;     /* Centraliza verticalmente */
+    width: 100%;                 /* Ocupa toda a largura do artigo */
+    padding: 15px;
+    border: none;      /* Borda do botão */
+    border-radius: 0;            /* Retangular */
+    text-decoration: none;       /* Remove sublinhado */
+    color: #333;
+    transition: all 0.3s;
+    text-align: center;          /* Centraliza o texto */
+    background-color: transparent; /* Sem cor de fundo */
+}
+
+.btn-departamento img {
+    width: 80px;                 /* Ajuste conforme necessário */
+    height: 80px;
+    margin-bottom: 10px;         /* Espaço entre imagem e texto */
+   
+}
+
+.btn-departamento:hover {
+    border-color: #007BFF;       /* Muda a borda ao passar o mouse */
+    color: #007BFF;              /* Muda a cor do texto */
+    transform: translateY(-4px);
+    background-color: #f8f9fa;}
+
+.dep-text {
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+}
+
+.registration {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+    margin: 50px;
+    text-align: center;
+}
+
+.name {
+ 
+    border-style: ridge;
+    border-radius: 10px;
+}
+
+.surname {
+    border-style: ridge;
+    border-radius: 10px;
+}
+
+.regi-type {
+    border-style: ridge;
+    border-radius: 10px;
+}
+
+.reg-cpf {
+    border-style: ridge;
+    border-radius: 10px;
+}
+
+.registration-email {
+    border-style: ridge;
+    border-radius: 10px;
+}
+
+.reg-password {
+    border-style: ridge;
+    border-radius: 10px;
+}
+
+/* descrição dos produtos*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#popupDescricao {
+    display: none;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* Ícone do coração nos cards */
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SVG */
+.favorite-icon .heart-svg {
+    width: 26px;
+    height: 26px;
+    fill: white;
+    stroke: black;
+    stroke-width: 1.5;
+    transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+/* Ativo (favoritado) */
+.favorite-icon.ativo .heart-svg {
+    fill: red;
+    transform: scale(1.15);
+}
+
+/* ⚠️ REMOVIDO: NÃO pode ter transform aqui! */
+.favorite-icon.ativo {
+    color: red;
+    text-shadow: 0px 0px 8px black;
+}
+
+/* Badge favoritos do menu */
+.fav-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.fav-count.animar {
+    transform: scale(1.3);
+}
+
